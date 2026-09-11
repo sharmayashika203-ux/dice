@@ -13,7 +13,7 @@ export default function Qualifications({ onSelectCourse }) {
                 <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
                 <path d="M6 12v5c3 3 9 3 12 0v-5" />
               </svg>
-              <span>RECOGNIZED DEGREES 2025–26</span>
+              <span>RECOGNIZED DEGREES 2026–27</span>
             </div>
             <h2 class="section-title">Choose Your Teaching Qualification</h2>
           </div>

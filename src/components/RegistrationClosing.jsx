@@ -8,7 +8,7 @@ export default function RegistrationClosing() {
           <svg class="icon-trophy" viewBox="0 0 24 24" fill="currentColor">
             <path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94A5.01 5.01 0 0 0 11 15.9V18H8v2h8v-2h-3v-2.1c2.16-.4 3.86-2.06 4.39-4.24C19.08 11.34 21 9.25 21 6.7V5c0-1.1-.9-2-2-2zM5 7.7V7h2v3.8c-1.2-.42-2-1.5-2-3.1zm14 0c0 1.6-.8 2.68-2 3.1V7h2v.7z" />
           </svg>
-          <span>2025 REGISTRATION CLOSING SOON</span>
+          <span>2026 REGISTRATION CLOSING SOON</span>
         </div>
 
         <h2 class="closing-title">Don’t Miss An Academic Year! Secure Your Seat Today</h2>

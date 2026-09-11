@@ -15,7 +15,6 @@ export default function Footer() {
               </svg>
             </div>
             <span class="footer-brand-name">DICE ADMISSION</span>
-            <span class="footer-verified-badge">NCTE & UGC Verified</span>
           </div>
           <p class="footer-address">
             Basement 14–477 Sunder Vihar, Paschim Vihar, New Delhi 110087
@@ -40,7 +39,7 @@ export default function Footer() {
           </a>
 
           <span class="footer-divider">|</span>
-          <span class="footer-copyright">© 2025 DICE Guidance</span>
+          <span class="footer-copyright">© 2026 DICE Guidance</span>
         </div>
 
       </div>

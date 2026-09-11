@@ -309,6 +309,14 @@ button {
   background-color: #dbeafe;
 }
 
+.phone-num-full {
+  display: inline;
+}
+
+.phone-num-short {
+  display: none;
+}
+
 .icon-phone-blue {
   width: 16px;
   height: 16px;
@@ -675,10 +683,13 @@ button {
 .input-icon {
   position: absolute;
   left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 18px;
   height: 18px;
   stroke: #94a3b8;
   pointer-events: none;
+  z-index: 5;
 }
 
 .form-input {
@@ -1517,23 +1528,38 @@ button {
   100% { transform: scale(1); opacity: 1; }
 }
 
-/* Responsive Rules */
+/* Responsive Rules & Mobile Optimization */
+html, body, #root, .app-container {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 @media (max-width: 1024px) {
   .hero-container {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 40px;
   }
 
   .hero-right-col {
+    display: flex;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .form-card {
-    max-width: 100%;
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+    padding: 0; /* Container must not have padding */
+    box-sizing: border-box;
   }
 
   .ribbon-container {
     grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
 
   .program-cards-grid {
@@ -1542,11 +1568,13 @@ button {
 
   .stats-banner-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
 
   .quote-banner {
     flex-direction: column;
     text-align: center;
+    gap: 16px;
   }
 
   .quote-text-content {
@@ -1556,71 +1584,483 @@ button {
   .footer-container {
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
+    gap: 24px;
   }
 
   .footer-right {
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 16px;
   }
 }
 
 @media (max-width: 768px) {
+  .top-bar {
+    padding: 6px 12px;
+  }
+
   .top-bar-container {
+    padding: 0;
+    justify-content: center;
+  }
+
+  .top-bar-left {
     flex-direction: column;
-    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
     text-align: center;
+    width: 100%;
+  }
+
+  .alert-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 10.5px;
+    padding: 4px 10px;
+  }
+
+  .announcement-text {
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: center;
+    max-width: 100%;
   }
 
   .nav-menu {
     display: none;
   }
 
+  .header-container {
+    padding: 10px 14px;
+    gap: 8px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .brand-logo {
+    gap: 8px;
+    flex-shrink: 0;
+  }
+
+  .logo-icon-box {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    border-radius: 10px;
+  }
+
+  .cap-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .brand-name {
+    font-size: 16px;
+    white-space: nowrap;
+  }
+
+  .brand-tagline {
+    display: none;
+  }
+
+  .header-actions {
+    gap: 6px;
+    flex-shrink: 0;
+    align-items: center;
+  }
+
+  .header-phone-pill {
+    padding: 6px 10px;
+    font-size: 12px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .header-whatsapp-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .hero-section {
+    padding: 32px 16px;
+  }
+
   .hero-headline {
-    font-size: 32px;
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  .hero-subtext {
+    font-size: 14px;
+    line-height: 1.55;
+    margin-bottom: 20px;
   }
 
   .hero-features-grid {
     grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   .hero-cta-row {
     flex-direction: column;
     align-items: stretch;
+    width: 100%;
+    gap: 12px;
   }
 
   .btn-orange-call {
     justify-content: center;
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 15.5px;
   }
 
   .counselors-online-pill {
     justify-content: center;
+    width: 100%;
+    padding: 10px 14px;
+  }
+
+  .ribbon-section {
+    padding: 32px 16px;
   }
 
   .ribbon-container {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
 
-  .form-row-2col {
-    grid-template-columns: 1fr;
+  .qualifications-section {
+    padding: 36px 16px;
   }
 
   .section-header-row {
     flex-direction: column;
     align-items: flex-start;
+    gap: 8px;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+
+  .program-card {
+    padding: 20px 16px;
+  }
+
+  .program-details-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .program-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .btn-apply-now, .btn-enquire-card {
+    width: 100%;
+    justify-content: center;
+    padding: 12px;
+  }
+
+  /* Form Responsive Styles */
+  .hero-right-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .form-card {
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 20px;
+    box-sizing: border-box;
+  }
+
+  .form-card-header {
+    padding: 20px 18px 18px;
+  }
+
+  .scholarship-desk-badge {
+    position: relative;
+    top: 0;
+    right: 0;
+    display: inline-flex;
+    margin-bottom: 10px;
+    font-size: 11px;
+    padding: 4px 12px;
+  }
+
+  .form-header-title {
+    padding-right: 0;
+    font-size: 20px;
+  }
+
+  .form-card-body {
+    padding: 20px 18px 18px;
+  }
+
+  .form-row-2col {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  /* Set input font-size to 16px on mobile to prevent iOS Safari auto-zoom while preserving icon padding */
+  .form-group input {
+    font-size: 16px;
+    height: 46px;
+    padding: 10px 14px 10px 44px;
+  }
+
+  .form-group select {
+    font-size: 16px;
+    height: 46px;
+    padding: 10px 32px 10px 14px;
+  }
+
+  .btn-submit-counselling {
+    padding: 14px;
+    font-size: 16px;
+  }
+
+  .stats-banner-section {
+    padding: 28px 16px;
+  }
+
+  .stat-number {
+    font-size: 30px;
+  }
+
+  .quote-banner-section {
+    padding: 28px 16px;
+  }
+
+  .quote-banner {
+    padding: 20px 16px;
+  }
+
+  .quote-text {
+    font-size: 17px;
+  }
+
+  .btn-quote-cta {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .closing-section {
+    padding: 28px 16px;
+  }
+
+  .closing-card {
+    padding: 20px 16px;
   }
 
   .closing-title {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .closing-actions-row {
     flex-direction: column;
     width: 100%;
+    gap: 10px;
   }
 
   .btn-closing-call, .btn-closing-whatsapp {
     width: 100%;
     justify-content: center;
+  }
+
+  .main-footer {
+    padding: 32px 16px 20px;
+  }
+
+  .footer-container {
+    gap: 20px;
+  }
+
+  .modal-content {
+    width: 94%;
+    padding: 20px 16px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-bar {
+    padding: 6px 10px;
+  }
+
+  .alert-badge {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+
+  .announcement-text {
+    font-size: 11.5px;
+  }
+
+  .header-container {
+    padding: 8px 10px;
+    gap: 6px;
+  }
+
+  .brand-logo {
+    gap: 6px;
+  }
+
+  .brand-name {
+    font-size: 15px;
+  }
+
+  .brand-tagline {
+    display: none;
+  }
+
+  .phone-num-full {
+    display: none;
+  }
+
+  .phone-num-short {
+    display: inline;
+  }
+
+  .header-actions {
+    gap: 5px;
+  }
+
+  .header-phone-pill {
+    padding: 6px 9px;
+    font-size: 12px;
+  }
+
+  .header-whatsapp-btn {
+    padding: 6px 9px;
+    font-size: 12px;
+  }
+
+  .hero-pill {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+
+  .hero-headline {
+    font-size: 24px;
+    line-height: 1.25;
+  }
+
+  .hero-subtext {
+    font-size: 13.5px;
+  }
+
+  .feature-card {
+    padding: 10px 12px;
+  }
+
+  .feature-card-text {
+    font-size: 12.5px;
+  }
+
+  .form-card {
+    max-width: 100%;
+    padding: 0;
+    border-radius: 16px;
+  }
+
+  .form-card-header {
+    padding: 16px 14px 14px;
+  }
+
+  .form-card-body {
+    padding: 16px 14px 14px;
+  }
+
+  .form-header-title {
+    font-size: 18px;
+  }
+
+  .program-card {
+    padding: 16px 12px;
+  }
+
+  .program-details-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .stats-banner-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .stat-card {
+    padding: 12px 10px;
+  }
+
+  .stat-number {
+    font-size: 24px;
+  }
+
+  .stat-label {
+    font-size: 11px;
+  }
+
+  .timer-unit {
+    width: 52px;
+    height: 52px;
+  }
+
+  .timer-value {
+    font-size: 19px;
+  }
+
+  .timer-label {
+    font-size: 8.5px;
+  }
+
+  .closing-title {
+    font-size: 20px;
+  }
+
+  .quote-text {
+    font-size: 15px;
+  }
+
+  .footer-contact-item {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-headline {
+    font-size: 22px;
+  }
+
+  .badge-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .stats-banner-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-card-header {
+    padding: 14px 12px 12px;
+  }
+
+  .form-card-body {
+    padding: 14px 12px 12px;
   }
 }

@@ -37,7 +37,7 @@ export default function CounsellingForm({ onSubmitSuccess, desiredCourse, setDes
         </div>
         <h2 className="form-header-title">Claim Free Counselling</h2>
         <p className="form-header-sub">
-          Get instant fee concession voucher up to <strong className="text-gold-highlight">₹15,000</strong> for 2025–26 batch.
+          Get instant fee concession voucher up to <strong className="text-gold-highlight">₹15,000</strong> for 2026–27 batch.
         </p>
       </div>
 

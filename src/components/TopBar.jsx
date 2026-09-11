@@ -12,7 +12,7 @@ export default function TopBar() {
             URGENT ALERT
           </span>
           <span className="announcement-text">
-            Limited Seats Open for 2025–26 Session <span className="bullet">•</span> Early Bird Scholarship Concession Active
+            Limited Seats Open for 2026–27 Session <span className="bullet">•</span> Early Bird Scholarship Concession Active
           </span>
         </div>
       </div>
