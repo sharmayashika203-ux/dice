@@ -7,6 +7,7 @@ import Qualifications from './components/Qualifications';
 import StatsBanner from './components/StatsBanner';
 import QuoteBanner from './components/QuoteBanner';
 import RegistrationClosing from './components/RegistrationClosing';
+import DisclaimerBanner from './components/DisclaimerBanner';
 import Footer from './components/Footer';
 import Modal from './components/Modal';
 
@@ -29,7 +30,7 @@ export default function App() {
   };
 
   return (
-    <div class="app-root">
+    <div className="app-root">
       <TopBar />
       <Header />
       <Hero
@@ -39,11 +40,12 @@ export default function App() {
       />
       <FeatureRibbon />
       <Qualifications onSelectCourse={handleSelectCourse} />
-      <div class="qualifications-container">
+      <div className="qualifications-container">
         <StatsBanner />
         <QuoteBanner />
       </div>
       <RegistrationClosing />
+      <DisclaimerBanner />
       <Footer />
       <Modal
         isOpen={isModalOpen}

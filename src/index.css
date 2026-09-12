@@ -1395,6 +1395,31 @@ button {
   color: var(--color-slate-light);
 }
 
+.footer-disclaimer-banner {
+  background-color: #ebf5fe;
+  border-top: 1px solid #dbeafe;
+  padding: 18px 0;
+  margin-top: 20px;
+}
+
+.footer-disclaimer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.footer-disclaimer-text {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #334155;
+  margin: 0;
+}
+
+.footer-disclaimer-text strong {
+  color: #0f172a;
+  font-weight: 700;
+}
+
 /* MODAL DIALOG STYLES */
 .modal-backdrop {
   position: fixed;
